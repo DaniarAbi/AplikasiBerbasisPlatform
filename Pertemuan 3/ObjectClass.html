@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Belajar Object Java Script</title>
+    </head>
+    <body>
+        <script>
+            function Person(firstname, lastname){
+                //Properti
+                this.firstname = firstname;
+                this.lastname = lastname;
+
+                //Method
+                this.fullName = function(){
+                    return `${this.firstname} ${this.lastname}`
+                }
+                this.showName = function(){
+                    document.write(this.fullName());
+                }
+            }
+
+            var Person1 = new Person("Daniar", "Abi Pratama");
+            var Person2 = new Person("Techno", "Infinity");
+            
+            Person1.showName();
+            document.write("<br>");
+            Person2.showName();
+        </script>
+    </body>
+</html>
