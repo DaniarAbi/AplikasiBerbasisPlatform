@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <heaed>
+        <title>Method Array</title>
+    </head>
+    <body>
+        <script>
+            //Membuat Array
+            var buah = ["Apel", "Jeruk", "Mangga", "Anggur"];
+
+            document.write("<h3>Daftar buah</h3>");
+            document.write("<ol>");
+              
+            //Method push untuk menambahkan 1 data kedalam array pada ujung kanan atau bagian terakhir  
+            buah.push("Sirsak");
+
+            //Method pop untuk mengurangi 1 data dari ujung kanan atau akhir array
+            //karena sudah push "Sirsak" di ujung kanan, maka yang dikurangi adalah "Sirsak"
+            buah.pop();
+            
+            //Method shift untuk mengurangi 1 data awal awal
+            //Terlihat yang di awal adalah "Apel", maka yang dikurangi adalah bagian "Apel"
+            buah.shift();
+            
+            //Method unshift untuk menambahkan 1 data bagian awal
+            //Misal "Apel" adalah array pertama, jika unhift("Durian") maka "Durian" menjadi array pertama dan bagian "Apel" menjadi array ke 2
+            buah.unshift("Durian");
+            
+            //Method delete untuk menghapus bagian data tergantung index yang ingin dihapus
+            //Index dimulai dari 0
+            //Index "Apel" adalah 0, Index "Jeruk" adalah 1, Index "Mangga" adalah 2
+            //delete buah[2];
+            //delet buah[2], maka yang di hapus adalah "Mangga"
+            
+            //Method Splice untuk menambah element array pada bagian index yang di tentukan
+            buah.splice(2, 0, "Pisang", "Semangka");
+            //2 merupakan posisi index yang ingin di tambahkan
+            //0 merupakan berapa banyak element yang mau di hapus
+            //Jika 0 di ubah menjadi 1, maka yang hilang "Mangga"
+            //Jika 0 di ubah menjadi 2, maka yang hilang "Mangga" dan "Anggur"
+
+
+            //Menggunakan Perulangan untuk mencetak semua isi array
+            for(let i = 0; i < buah.length; i++){
+                document.write(`<li>${ buah[i] }</li>`);
+            }
+            document.write("</ol>");
+        </script>
+    </body>
+    <br>
+    <body>
+        <script>
+             //Membuat Array
+             var buah1 = ["Apel", "Jeruk", "Mangga", "Anggur", "Sirsak", "Durian"];
+
+            document.write("<h3>Daftar buah</h3>");
+            document.write("<ol>");
+            
+            //Method slice untuk menghilangkan element array
+            const coba = buah1.slice(3);
+            //slice(3) artinya menghilangkan 3 element awal, yaitu "Apel", "Jeruk", "Mangga"
+
+            //Menggunakan Perulangan untuk mencetak semua isi array
+            for(let i = 0; i < coba.length; i++){
+                document.write(`<li>${ coba[i] }</li>`);
+            }
+            document.write("</ol>");
+        </script>
+    </body>
+    <br>
+    <body>
+        <script>
+             //Membuat Array
+             var buah2 = ["Apel", "Jeruk", "Mangga", "Anggur", "Sirsak", "Durian"];
+
+            document.write("<h3>Daftar buah</h3>");
+            document.write("<ol>");
+            
+            //Method delete untuk menghapus bagian data tergantung index yang ingin dihapus
+            //Index dimulai dari 0
+            //Index "Apel" adalah 0, Index "Jeruk" adalah 1, Index "Mangga" adalah 2
+            delete buah2[2];
+            //delet buah[2], maka yang di hapus adalah "Mangga"
+
+            //Menggunakan Perulangan untuk mencetak semua isi array
+            for(let i = 0; i < buah2.length; i++){
+                document.write(`<li>${ buah2[i] }</li>`);
+            }
+            document.write("</ol>");
+        </script>
+    </body>
+</html>
